@@ -1,0 +1,24 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.0edab169-3813-4272-bfef-5c547bd2d851",
+      "was_cloned": true,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-aces-jumbles-zilch-default"
+              }
+            }
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "bc353797c69d35b9baa329064e08836e"
+        }
+      }
+    }
+  }
+}
