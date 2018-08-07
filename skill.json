@@ -9,7 +9,7 @@
             "Alexa open Aces Jumble Zilch game",
             "Alexa ask Aces Jumble Zilch game is it {number}"
           ],
-          "name": "aces-jumbles-zilch",
+          "name": "aces jumbles zilch",
           "description": "Guess a number between 102 and 298, and Alexa will tell you if you if you got a single digit in the right place by saying ace, you got a digit in the wrong place by saying jumble or you got a digit wrong by saying zilch."
         },
         "en-GB": {
@@ -19,7 +19,7 @@
             "Alexa start Aces Jumble Zilch game",
             "Alexa ask Aces Jumble Zilch game is it {number}"
           ],
-          "name": "aces-jumble-zilch",
+          "name": "aces jumbles zilch",
           "description": "Guess a number, and Alexa will tell you if you need to guess higher or lower. She will also tell you how many times you have played. "
         }
       },

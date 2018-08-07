@@ -2,7 +2,7 @@
   "deploy_settings": {
     "default": {
       "skill_id": "amzn1.ask.skill.0edab169-3813-4272-bfef-5c547bd2d851",
-      "was_cloned": true,
+      "was_cloned": false,
       "merge": {
         "manifest": {
           "apis": {
@@ -16,8 +16,27 @@
       },
       "resources": {
         "manifest": {
-          "eTag": "bc353797c69d35b9baa329064e08836e"
-        }
+          "eTag": "d2999304445cf79e28ae652240f1998e"
+        },
+        "interactionModel": {
+          "en-GB": {
+            "eTag": "11e048a5b3c311e4a61dc7e4f39e892d"
+          },
+          "en-US": {
+            "eTag": "d11635029864857960546e5b1d09f193"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:171891960661:function:ask-aces-jumbles-zilch-default",
+            "functionName": "ask-aces-jumbles-zilch-default",
+            "awsRegion": "us-east-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "e23306ec-70d4-4957-ae93-0542e2f0c56d"
+          }
+        ]
       }
     }
   }
