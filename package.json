@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "tronsguitar/aces-jumbles-zilch-alexaskill" 
+    "url": "tronsguitar/aces-jumbles-zilch-alexaskill"
   },
   "keywords": [
     "Alexa",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/TronsGuitar/aces-jumbles-zilch-alexaskill#readme",
   "dependencies": {
+    "alexa-sdk": "^1.0.25",
     "ask-sdk": "^2.0.0"
   }
 }

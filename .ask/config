@@ -16,7 +16,7 @@
       },
       "resources": {
         "manifest": {
-          "eTag": "d2999304445cf79e28ae652240f1998e"
+          "eTag": "faeff3547dbfbd00d4dd214edb002789"
         },
         "interactionModel": {
           "en-GB": {
@@ -29,12 +29,12 @@
         "lambda": [
           {
             "arn": "arn:aws:lambda:us-east-1:171891960661:function:ask-aces-jumbles-zilch-default",
-            "functionName": "ask-aces-jumbles-zilch-default",
+            "functionName": "arn:aws:lambda:us-east-1:171891960661:function:ask-aces-jumbles-zilch-default",
             "awsRegion": "us-east-1",
             "alexaUsage": [
               "custom/default"
             ],
-            "revisionId": "e23306ec-70d4-4957-ae93-0542e2f0c56d"
+            "revisionId": "9a7eed28-eb40-4b1b-a9e6-cb893f4e3f6f"
           }
         ]
       }
