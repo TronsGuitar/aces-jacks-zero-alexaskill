@@ -3,25 +3,35 @@
 /* eslint-disable  no-restricted-syntax */
 
 const Alexa = require('ask-sdk');
+const cookbook = require('./alexa-cookbook.js');
 
 const SKILL_NAME = 'Aces Jumble Zilch Game';
-const FALLBACK_MESSAGE_DURING_GAME = `The ${SKILL_NAME} skill can't help you with that.  Try guessing a number between 0 and 100. `;
+const FALLBACK_MESSAGE_DURING_GAME = 'The ${SKILL_NAME} skill can\'t help you with that.  Try guessing a number between 0 and 100. ';
 const FALLBACK_REPROMPT_DURING_GAME = 'Please guess a number between 0 and 100.';
-const FALLBACK_MESSAGE_OUTSIDE_GAME = `The ${SKILL_NAME} skill can't help you with that.  It will come up with a number between 0 and 100 and you try to guess it by saying a number in that range. Would you like to play?`;
+const FALLBACK_MESSAGE_OUTSIDE_GAME = 'The ${SKILL_NAME} skill can\'t help you with that.  It will come up with a number between 0 and 100 and you try to guess it by saying a number in that range. Would you like to play?';
 const FALLBACK_REPROMPT_OUTSIDE_GAME = 'Say yes to start the game or no to quit.';
 
+exports.handler = function(event, context, callback) {
+  var alexa = Alexa.handler(event, context);
+  alexa.appId = APP_ID;
+  alexa.registerHandlers(handlers);
+  alexa.execute();
+};
+
 const LaunchRequest = {
-  canHandle(handlerInput) {
+  canHandle({requestEnvelope}) {
     // launch requests as well as any new session, as games are not saved in progress, which makes
     // no one shots a reasonable idea except for help, and the welcome message provides some help.
-    return handlerInput.requestEnvelope.session.new || handlerInput.requestEnvelope.request.type === 'LaunchRequest';
+    return request.session.new || request.type === 'LaunchRequest';
   },
-  async handle(handlerInput) {
+  async handle({handlerInput}) 
+  {
     const attributesManager = handlerInput.attributesManager;
     const responseBuilder = handlerInput.responseBuilder;
 
-    const attributes = await attributesManager.getPersistentAttributes() || {};
-    if (Object.keys(attributes).length === 0) {
+    const attributes = await attributesManager.getPersistentAttributes();
+    if (Object.keys(attributes).length === 0) 
+    {
       attributes.endedSessionCount = 0;
       attributes.gamesPlayed = 0;
       attributes.gameState = 'ENDED';
@@ -29,7 +39,7 @@ const LaunchRequest = {
 
     attributesManager.setSessionAttributes(attributes);
 
-    const speechOutput = `Welcome to Aces Jumble Zilch guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?`;
+    const speechOutput = 'Welcome to Aces Jumble Zilch guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';
     const reprompt = 'Say yes to start the game or no to quit.';
     return responseBuilder
       .speak(speechOutput)
@@ -42,9 +52,9 @@ const ExitHandler = {
   canHandle(handlerInput) {
     const request = handlerInput.requestEnvelope.request;
 
-    return request.type === 'IntentRequest'
+    return (request.type === 'IntentRequest'
       && (request.intent.name === 'AMAZON.CancelIntent'
-        || request.intent.name === 'AMAZON.StopIntent');
+        || request.intent.name === 'AMAZON.StopIntent'));
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
@@ -58,7 +68,7 @@ const SessionEndedRequest = {
     return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
   },
   handle(handlerInput) {
-    console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
+    console.log('Session ended with reason: ${handlerInput.requestEnvelope.request.reason}');
     return handlerInput.responseBuilder.getResponse();
   },
 };
@@ -178,12 +188,12 @@ const NumberGuessIntent = {
 
     if (guessNum > targetNum) {
       return responseBuilder
-        .speak(`${guessNum.toString()} is too high.`)
+        .speak('${guessNum.toString()} is too high.')
         .reprompt('Try saying a smaller number.')
         .getResponse();
     } else if (guessNum < targetNum) {
       return responseBuilder
-        .speak(`${guessNum.toString()} is too low.`)
+        .speak('${guessNum.toString()} is too low.')
         .reprompt('Try saying a larger number.')
         .getResponse();
     } else if (guessNum === targetNum) {
@@ -192,7 +202,7 @@ const NumberGuessIntent = {
       attributesManager.setPersistentAttributes(sessionAttributes);
       await attributesManager.savePersistentAttributes();
       return responseBuilder
-        .speak(`${guessNum.toString()} is correct! Would you like to play a new game?`)
+        .speak('${guessNum.toString()} is correct! Would you like to play a new game?')
         .reprompt('Say yes to start a new game, or no to end the game.')
         .getResponse();
     }
@@ -208,7 +218,7 @@ const ErrorHandler = {
     return true;
   },
   handle(handlerInput, error) {
-    console.log(`Error handled: ${error.message}`);
+    console.log('Error handled: ${error.message}');
 
     return handlerInput.responseBuilder
       .speak('Sorry, I can\'t understand the command. Please say again.')
