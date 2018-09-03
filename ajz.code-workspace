@@ -5,6 +5,15 @@
 			"lambdapath": "./lambda",
 			"modelspath": "./models",
 			"lambdaspath": "./node_modules"
+		},
+		{
+			"path": "lambda"
+		},
+		{
+			"path": "models"
+		},
+		{
+			"path": "node_modules"
 		}
 	],
 	"settings": {

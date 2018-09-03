@@ -8,6 +8,11 @@
             "script": "install",
             "path": "llambda/custom/",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "ask deploy",
+            "problemMatcher": []
         }
     ]
 }
