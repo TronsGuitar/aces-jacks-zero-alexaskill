@@ -9,7 +9,7 @@
  * as testing instructions are located at https://github.com/alexa/skill-sample-nodejs-fact
  **/
 
-const Alexa = require('ask-sdk');
+import { SkillBuilders } from 'ask-sdk';
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = 'amzn1.ask.skill.0edab169-3813-4272-bfef-5c547bd2d851';
@@ -262,9 +262,9 @@ const FallbackHandler = {
   },
 };
 
-const skillBuilder = Alexa.SkillBuilders.standard();
+const skillBuilder = SkillBuilders.standard();
 
-exports.handler = dashbot.handler(skillBuilder
+export const handler = dashbot.handler(skillBuilder
   .addRequestHandlers(
     LaunchRequest,
     ExitHandler,

@@ -1,9 +1,10 @@
 /* eslint-disable  func-names */
 /* eslint-disable  no-console */
 /* eslint-disable  no-restricted-syntax */
+/*jshint esversion: 6 */
 
-const Alexa = require('ask-sdk');
-const cookbook = require('./alexa-cookbook.js');
+import { handler, SkillBuilders } from 'ask-sdk';
+import cookbook from './alexa-cookbook.js';
 
 const SKILL_NAME = 'Aces Jumble Zilch Game';
 const FALLBACK_MESSAGE_DURING_GAME = 'The ${SKILL_NAME} skill can\'t help you with that.  Try guessing a number between 0 and 100. ';
@@ -11,12 +12,6 @@ const FALLBACK_REPROMPT_DURING_GAME = 'Please guess a number between 0 and 100.'
 const FALLBACK_MESSAGE_OUTSIDE_GAME = 'The ${SKILL_NAME} skill can\'t help you with that.  It will come up with a number between 0 and 100 and you try to guess it by saying a number in that range. Would you like to play?';
 const FALLBACK_REPROMPT_OUTSIDE_GAME = 'Say yes to start the game or no to quit.';
 
-exports.handler = function(event, context, callback) {
-  var alexa = Alexa.handler(event, context);
-  alexa.appId = APP_ID;
-  alexa.registerHandlers(handlers);
-  alexa.execute();
-};
 
 const LaunchRequest = {
   canHandle({requestEnvelope}) {
@@ -24,12 +19,12 @@ const LaunchRequest = {
     // no one shots a reasonable idea except for help, and the welcome message provides some help.
     return request.session.new || request.type === 'LaunchRequest';
   },
-  async handle({handlerInput}) 
+ handle({handlerInput}) 
   {
     const attributesManager = handlerInput.attributesManager;
     const responseBuilder = handlerInput.responseBuilder;
 
-    const attributes = await attributesManager.getPersistentAttributes();
+    const attributes = attributesManager.getPersistentAttributes();
     if (Object.keys(attributes).length === 0) 
     {
       attributes.endedSessionCount = 0;
@@ -262,9 +257,9 @@ const FallbackHandler = {
   },
 };
 
-const skillBuilder = Alexa.SkillBuilders.standard();
+const skillBuilder = SkillBuilders.standard();
 
-exports.handler = skillBuilder
+export const handler = skillBuilder
   .addRequestHandlers(
     LaunchRequest,
     ExitHandler,
