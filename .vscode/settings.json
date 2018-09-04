@@ -1,3 +1,5 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "favorites.sortDirection": "ASC",
+    "favorites.groupsFirst": true
 }
