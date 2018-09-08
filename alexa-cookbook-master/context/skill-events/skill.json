@@ -1,0 +1,75 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Sample Short Description",
+          "examplePhrases": [
+            "Alexa open hello world",
+            "Alexa tell hello world I am Jeff",
+            "Alexa tell hello world my name is Peter"
+          ],
+          "name": "household-list",
+          "description": "Sample Full Description"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        }
+      },
+      "householdList" : {
+      }
+    },
+    "permissions": [
+      { "name": "alexa::household:lists:read" }
+    ],
+    "events": {
+     "endpoint": {
+      "uri": "### TODO: FILL IN WITH YOUR LAMBDA ARN ###"
+     },
+     "subscriptions": [
+        {
+          "eventName": "SKILL_ENABLED"
+        },
+        {
+          "eventName": "SKILL_DISABLED"
+        },
+        {
+          "eventName": "SKILL_PERMISSION_ACCEPTED"
+        },
+        {
+          "eventName": "SKILL_PERMISSION_CHANGED"
+        },
+        {
+          "eventName": "SKILL_ACCOUNT_LINKED"
+        },
+        {
+          "eventName": "ITEMS_CREATED"
+        },
+        {
+          "eventName": "ITEMS_UPDATED"
+        },
+        {
+          "eventName": "ITEMS_DELETED"
+        },
+        {
+          "eventName": "LIST_CREATED"
+        },
+        {
+          "eventName": "LIST_UPDATED"
+        },
+        {
+          "eventName": "LIST_DELETED"
+        }
+      ]
+    },
+    "manifestVersion": "1.0"
+  }
+}

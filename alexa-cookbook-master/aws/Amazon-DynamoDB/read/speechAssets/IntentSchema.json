@@ -1,0 +1,23 @@
+{
+  "intents": [
+    {
+      "intent": "MyIntent",
+      "slots": [
+        {
+          "name": "MyQuestion",
+          "type": "AMAZON.US_STATE"
+        }
+      ]
+    },
+
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
