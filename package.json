@@ -1,7 +1,7 @@
 {
-  "name": "aces-jumbles-zilch-numbergame",
+  "name": "aces-jacks-zilch",
   "version": "2.0.0",
-  "description": "Aces Jumbles Zilch number guessing game for Alexa",
+  "description":"ay jay zee number guessing game for Alexa",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +11,12 @@
     "url": "tronsguitar/aces-jumbles-zilch-alexaskill"
   },
   "keywords": [
-    "Alexa",
+    "number",
+    "guessing",
     "game",
     "skill"
   ],
-  "author": "Amazon.com",
+  "author": "brennon",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/TronsGuitar/aces-jumbles-zilch-alexaskill/issues"

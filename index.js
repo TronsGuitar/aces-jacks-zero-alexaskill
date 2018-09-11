@@ -131,7 +131,7 @@ const NoIntent = {
 
     return !isCurrentlyPlaying && request.type === 'IntentRequest' && request.intent.name === 'AMAZON.NoIntent';
   },
-  async handle(handlerInput) {
+  handle(handlerInput) {
     const attributesManager = handlerInput.attributesManager;
     const responseBuilder = handlerInput.responseBuilder;
     const sessionAttributes = attributesManager.getSessionAttributes();
@@ -140,7 +140,7 @@ const NoIntent = {
     sessionAttributes.gameState = 'ENDED';
     attributesManager.setPersistentAttributes(sessionAttributes);
 
-    await attributesManager.savePersistentAttributes();
+    attributesManager.savePersistentAttributes();
 
     return responseBuilder.speak('Ok, see you next time!').getResponse();
   },
@@ -174,7 +174,7 @@ const NumberGuessIntent = {
 
     return isCurrentlyPlaying && request.type === 'IntentRequest' && request.intent.name === 'NumberGuessIntent';
   },
-  async handle(handlerInput) {
+  handle(handlerInput) {
     const { requestEnvelope, attributesManager, responseBuilder } = handlerInput;
 
     const guessNum = parseInt(requestEnvelope.request.intent.slots.number.value, 10);
@@ -195,7 +195,7 @@ const NumberGuessIntent = {
       sessionAttributes.gamesPlayed += 1;
       sessionAttributes.gameState = 'ENDED';
       attributesManager.setPersistentAttributes(sessionAttributes);
-      await attributesManager.savePersistentAttributes();
+      attributesManager.savePersistentAttributes();
       return responseBuilder
         .speak('${guessNum.toString()} is correct! Would you like to play a new game?')
         .reprompt('Say yes to start a new game, or no to end the game.')
@@ -259,7 +259,7 @@ const FallbackHandler = {
 
 const skillBuilder = SkillBuilders.standard();
 
-export const handler = skillBuilder
+export const handlers = skillBuilder
   .addRequestHandlers(
     LaunchRequest,
     ExitHandler,
@@ -269,9 +269,9 @@ export const handler = skillBuilder
     NoIntent,
     NumberGuessIntent,
     FallbackHandler,
-    UnhandledIntent,
+    UnhandledIntent
   )
   .addErrorHandlers(ErrorHandler)
-  .withTableName('High-Low-Game')
+  .withTableName('aces-jacks-zilch')
   .withAutoCreateTable(true)
   .lambda();

@@ -4,7 +4,11 @@
   "description": "Aces Jumbles Zilch number guessing game for Alexa",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "invoke": "aws lambda invoke --function-name 'HelloWorld' --payload fileb://../tests/events/alexa-start-session.json ../tests/out.txt && cat ../tests/out.txt",
+      "test": "node ../tests/test.js",
+      "deploy": "npm run zip && npm run upload",
+      "upload": "aws lambda update-function-code --function-name 'HelloWorld' --zip-file fileb://../index.zip",
+      "zip": "zip -r ../index.zip . -x 'package.json' -x '*.git*' "
   },
   "repository": {
     "type": "git",
