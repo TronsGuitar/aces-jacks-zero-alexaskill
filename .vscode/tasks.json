@@ -13,6 +13,12 @@
             "type": "npm",
             "script": "ask deploy",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "deploy",
+            "path": "lambda/custom/",
+            "problemMatcher": []
         }
     ]
 }

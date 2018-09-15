@@ -40,7 +40,7 @@ const LaunchRequest = {
 
     attributesManager.setSessionAttributes(attributes);
 
-    const speechOutput = 'Welcome to Aces Jumble Zilch guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';
+    const speechOutput = 'Welcome to Aces Jacks Zilch guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';
     const reprompt = 'Say yes to start the game or no to quit.';
     return responseBuilder
       .speak(speechOutput)

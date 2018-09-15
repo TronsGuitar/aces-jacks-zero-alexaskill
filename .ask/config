@@ -8,7 +8,7 @@
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "ask-aces-jumbles-zilch-default"
+                "uri": "ask-aces-jacks-zilch-default"
               }
             }
           }
