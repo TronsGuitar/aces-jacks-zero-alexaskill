@@ -40,7 +40,8 @@
       }
     },
     "__ENVIRONMENT_ASK_PROFILE__": {
-      "skill_id": "",
+      "skill_id": "amzn1.ask.skill.0edab169-3813-4272-bfef-5c547bd2d851",
+      "vender_id": "M2DBY51Z34WY32",
       "was_cloned": false,
       "merge": {
         "manifest": {

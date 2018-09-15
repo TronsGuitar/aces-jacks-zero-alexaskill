@@ -13,7 +13,7 @@ import { SkillBuilders } from 'ask-sdk';
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = 'amzn1.ask.skill.0edab169-3813-4272-bfef-5c547bd2d851';
-const SKILL_NAME = 'aces jumbles zilch';
+const SKILL_NAME = 'aces jacks zilch';
 const FALLBACK_MESSAGE_DURING_GAME = 'The ${SKILL_NAME} skill cant help you with that.  Try guessing a number between 102 and 298. ';
 const FALLBACK_REPROMPT_DURING_GAME = 'Please guess a number between 0 and 100.';
 const FALLBACK_MESSAGE_OUTSIDE_GAME = 'The ${SKILL_NAME} skill cant help you with that.  It will come up with a number between 102 and 298 and you try to guess it by saying a non-repeating number in that range. Would you like to play?';
@@ -73,9 +73,9 @@ const SessionEndedRequest = {
 };
 
 const HelpIntent = {
-  canHandle(handlerInput) {
+  canHandle(handlerInput)
+   {
     const request = handlerInput.requestEnvelope.request;
-
     return request.type === 'IntentRequest' && request.intent.name === 'AMAZON.HelpIntent';
   },
   handle(handlerInput) {
@@ -98,8 +98,8 @@ const YesIntent = {
     const attributesManager = handlerInput.attributesManager;
     const sessionAttributes = attributesManager.getSessionAttributes();
 
-    if (sessionAttributes.gameState &&
-        sessionAttributes.gameState === 'STARTED') {
+    if (sessionAttributes.gameState && sessionAttributes.gameState === 'STARTED')
+    {
       isCurrentlyPlaying = true;
     }
 
@@ -111,7 +111,7 @@ const YesIntent = {
     const sessionAttributes = attributesManager.getSessionAttributes();
 
     sessionAttributes.gameState = 'STARTED';
-    sessionAttributes.guessNumber = Math.floor(Math.random() * 101);
+    sessionAttributes.guessNumber = Math.floor(Math.random * 101);
 
     return responseBuilder
       .speak('Great! Try saying a number to start the game.')
@@ -188,12 +188,12 @@ const NumberGuessIntent = {
 
     if (guessNum > targetNum) {
       return responseBuilder
-        .speak('${guessNum.toString()} is too high.')
+        .speak('${guessNum.toString} is too high.')
         .reprompt('Try saying a smaller number.')
         .getResponse();
     } else if (guessNum < targetNum) {
       return responseBuilder
-        .speak('${guessNum.toString()} is too low.')
+        .speak('${guessNum.toString} is too low.')
         .reprompt('Try saying a larger number.')
         .getResponse();
     } else if (guessNum === targetNum) {
@@ -202,7 +202,7 @@ const NumberGuessIntent = {
       attributesManager.setPersistentAttributes(sessionAttributes);
       attributesManager.savePersistentAttributes();
       return responseBuilder
-        .speak('${guessNum.toString()} is correct! Would you like to play a new game?')
+        .speak('${guessNum.toString} is correct! Would you like to play a new game?')
         .reprompt('Say yes to start a new game, or no to end the game.')
         .getResponse();
     }
@@ -264,7 +264,7 @@ const FallbackHandler = {
 
 const skillBuilder = SkillBuilders.standard();
 
-export const handler = dashbot.handler(skillBuilder
+export const handler = dashbot.handler(skillBuilder)
   .addRequestHandlers(
     LaunchRequest,
     ExitHandler,
@@ -279,4 +279,4 @@ export const handler = dashbot.handler(skillBuilder
   .addErrorHandlers(ErrorHandler)
   .withTableName('AcesJumbleZilchGame')
   .withAutoCreateTable(true)
-  .lambda());
+  .lambda();

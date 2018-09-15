@@ -1,3 +1,0 @@
-MyIntent hello
-WhatsUpIntent what is up
-MyNameIsIntent my name is {firstname}
