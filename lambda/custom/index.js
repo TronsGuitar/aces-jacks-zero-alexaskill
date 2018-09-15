@@ -13,7 +13,7 @@ import { SkillBuilders } from 'ask-sdk';
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = 'amzn1.ask.skill.0edab169-3813-4272-bfef-5c547bd2d851';
-const SKILL_NAME = 'aces jacks zilch';
+const SKILL_NAME = 'aces jacks zero';
 const FALLBACK_MESSAGE_DURING_GAME = 'The ${SKILL_NAME} skill cant help you with that.  Try guessing a number between 102 and 298. ';
 const FALLBACK_REPROMPT_DURING_GAME = 'Please guess a number between 0 and 100.';
 const FALLBACK_MESSAGE_OUTSIDE_GAME = 'The ${SKILL_NAME} skill cant help you with that.  It will come up with a number between 102 and 298 and you try to guess it by saying a non-repeating number in that range. Would you like to play?';
@@ -40,7 +40,7 @@ const LaunchRequest = {
 
     attributesManager.setSessionAttributes(attributes);
 
-    const speechOutput = 'Welcome to Aces Jacks Zilch guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';
+    const speechOutput = 'Welcome to Aces Jacks zero guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';
     const reprompt = 'Say yes to start the game or no to quit.';
     return responseBuilder
       .speak(speechOutput)
@@ -277,6 +277,6 @@ export const handler = dashbot.handler(skillBuilder)
     UnhandledIntent
   )
   .addErrorHandlers(ErrorHandler)
-  .withTableName('AcesJumbleZilchGame')
+  .withTableName('AcesJumblezeroGame')
   .withAutoCreateTable(true)
   .lambda();

@@ -3,23 +3,23 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Guess a number between 102 and 298, and Alexa will say Aces, Jumble and Zilch depending on how close you are.",
+          "summary": "Guess a number between 102 and 298, and Alexa will say Aces, Jumble and zero depending on how close you are.",
           "examplePhrases": [
             "alexa open ay jay zee game",
-            "alexa open aces jacks zilch",
-            "alexa ask aces jacks zilch game is it {number}"
+            "alexa open aces jacks zero",
+            "alexa ask aces jacks zero game is it {number}"
           ],
-          "name": "aces jacks zilch",
-          "description": "Guess a number between 102 and 298, and Alexa will tell you if you if you got a single digit in the right place by saying ace, you got a digit in the wrong place by saying jumble or you got a digit wrong by saying zilch."
+          "name": "aces jacks zero",
+          "description": "Guess a number between 102 and 298, and Alexa will tell you if you if you got a single digit in the right place by saying ace, you got a digit in the wrong place by saying jumble or you got a digit wrong by saying zero."
         },
         "en-GB": {
-          "summary": "Guess a number between 102 and 298, and Alexa will say Aces, Jumble and Zilch depending on how close you are.",
+          "summary": "Guess a number between 102 and 298, and Alexa will say Aces, Jumble and zero depending on how close you are.",
           "examplePhrases": [
             "Alexa open ay jay zee game",
-            "Alexa start aces jacks zilch game",
-            "Alexa ask aces jacks zilch game is it {number}"
+            "Alexa start aces jacks zero game",
+            "Alexa ask aces jacks zero game is it {number}"
           ],
-          "name": "aces jacks zilch",
+          "name": "aces jacks zero",
           "description": "Guess a number, and Alexa will tell you if you need to guess higher or lower. She will also tell you how many times you have played. "
         }
       },

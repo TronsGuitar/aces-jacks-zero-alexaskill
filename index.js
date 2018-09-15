@@ -5,7 +5,7 @@
 const Alexa = require('ask-sdk-core');
 const handler = require('ask-sdk');
 
-const SKILL_NAME = 'aces jack zilch';
+const SKILL_NAME = 'aces jack zero';
 const FALLBACK_MESSAGE_DURING_GAME = 'The ${SKILL_NAME} skill can\'t help you with that.  Try guessing a number between 0 and 100. ';
 const FALLBACK_REPROMPT_DURING_GAME = 'Please guess a number between 0 and 100.';
 const FALLBACK_MESSAGE_OUTSIDE_GAME = 'The ${SKILL_NAME} skill can\'t help you with that.  It will come up with a number between 0 and 100 and you try to guess it by saying a number in that range. Would you like to play?';
@@ -29,7 +29,7 @@ const LaunchRequestHandler = {
 
     attributesManager.setSessionAttributes(attributes);
 
-    const speechOutput = 'Welcome to Aces jack Zilch guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';
+    const speechOutput = 'Welcome to Aces jack zero guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';
     const reprompt = 'Say yes to start the game or no to quit.';
     return responseBuilder
       .speak(speechOutput)
@@ -279,7 +279,7 @@ export const handlers = skillBuilder
     UnhandledIntent
   )
   .addErrorHandlers(ErrorHandler)
-  .withTableName('aces-jacks-zilch')
+  .withTableName('aces-jacks-zero')
   .withAutoCreateTable(true)
   .lambda();
   
