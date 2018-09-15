@@ -1,0 +1,17 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  askacesjackszerodefault:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs8.10
+      CodeUri: .
+      Description: 'awsskill'
+      MemorySize: 128
+      Timeout: 8
+      Role: 'arn:aws:iam::171891960661:role/ask-lambda-aces-jumbles-zilch'
+      Events:
+        AlexaSkillEvent:
+          Type: AlexaSkill

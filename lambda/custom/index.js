@@ -15,7 +15,7 @@ import { SkillBuilders } from 'ask-sdk';
 const APP_ID = 'amzn1.ask.skill.0edab169-3813-4272-bfef-5c547bd2d851';
 const SKILL_NAME = 'aces jacks zero';
 const FALLBACK_MESSAGE_DURING_GAME = 'The ${SKILL_NAME} skill cant help you with that.  Try guessing a number between 102 and 298. ';
-const FALLBACK_REPROMPT_DURING_GAME = 'Please guess a number between 0 and 100.';
+const FALLBACK_REPROMPT_DURING_GAME = 'Please guess a number between 102 and 298.';
 const FALLBACK_MESSAGE_OUTSIDE_GAME = 'The ${SKILL_NAME} skill cant help you with that.  It will come up with a number between 102 and 298 and you try to guess it by saying a non-repeating number in that range. Would you like to play?';
 const FALLBACK_REPROMPT_OUTSIDE_GAME = 'Say yes to start the game or no to quit.';
 
@@ -277,6 +277,6 @@ export const handler = dashbot.handler(skillBuilder)
     UnhandledIntent
   )
   .addErrorHandlers(ErrorHandler)
-  .withTableName('AcesJumblezeroGame')
+  .withTableName('AcesJacksZeroGame')
   .withAutoCreateTable(true)
   .lambda();

@@ -1,18 +1,18 @@
 {
   "name": "aces-jacks-zero-numbergame",
-  "version": "2.0.0",
-  "description": "Aces Jacks zero number guessing game for Alexa",
+  "version": "2.1.0",
+  "description": "Aces Jacks Zilch number guessing game for Alexa",
   "main": "index.js",
   "scripts": {
-    "invoke": "aws lambda invoke --function-name 'HelloWorld' --payload fileb://../tests/events/alexa-start-session.json ../tests/out.txt && cat ../tests/out.txt",
+    "invoke": "aws lambda invoke --function-name 'acesjackszero' --payload fileb://../tests/events/alexa-start-session.json ../tests/out.txt && cat ../tests/out.txt",
     "test": "node ../tests/test.js",
     "deploy": "npm run zip && npm run upload",
-    "upload": "aws lambda update-function-code --function-name 'HelloWorld' --zip-file fileb://../index.zip",
+    "upload": "aws lambda update-function-code --function-name 'acesjackszero' --zip-file fileb://../index.zip",
     "zip": "zip -r ../index.zip . -x 'package.json' -x '*.git*' "
   },
   "repository": {
     "type": "git",
-    "url": "TronsGuitar/aces-jacks-zero-alexaskill"
+    "url": "TronsGuitar/aces-jumbles-zilch-alexaskill"
   },
   "keywords": [
     "numbers",
@@ -22,9 +22,9 @@
   "author": "Amazon.com",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/TronsGuitar/aces-jacks-zero-alexaskill/issues"
+    "url": "https://github.com/TronsGuitar/aces-jumbles-zilch-alexaskill/issues"
   },
-  "homepage": "https://github.com/TronsGuitar/aces-jacks-zero-alexaskill#readme",
+  "homepage": "https://github.com/TronsGuitar/aces-jumbles-zilch-alexaskill#readme",
   "dependencies": {
     "ask-sdk": "^2.0.7"
   }
