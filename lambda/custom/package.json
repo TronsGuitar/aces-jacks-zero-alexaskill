@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "TronsGuitar/aces-jumbles-zilch-alexaskill"
+    "url": "TronsGuitar/aces-jacks-zero-alexaskill"
   },
   "keywords": [
     "numbers",
@@ -22,9 +22,9 @@
   "author": "Amazon.com",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/TronsGuitar/aces-jumbles-zilch-alexaskill/issues"
+    "url": "https://github.com/TronsGuitar/aces-jacks-zero-alexaskill/issues"
   },
-  "homepage": "https://github.com/TronsGuitar/aces-jumbles-zilch-alexaskill#readme",
+  "homepage": "https://github.com/TronsGuitar/aces-jacks-zero-alexaskill#readme",
   "dependencies": {
     "ask-sdk": "^2.0.7"
   }

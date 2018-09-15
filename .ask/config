@@ -28,8 +28,8 @@
         },
         "lambda": [
           {
-            "arn": "arn:aws:lambda:us-east-1:171891960661:function:ask-aces-jumbles-zilch-default",
-            "functionName": "arn:aws:lambda:us-east-1:171891960661:function:ask-aces-jumbles-zilch-default",
+            "arn": "arn:aws:lambda:us-east-1:171891960661:function:ask-aces-jacks-zero-default",
+            "functionName": "arn:aws:lambda:us-east-1:171891960661:function:ask-aces-jacks-zero-default",
             "awsRegion": "us-east-1",
             "alexaUsage": [
               "custom/default"

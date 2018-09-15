@@ -23,7 +23,7 @@ configuration:
 ---
 - test: Launch request, play one game
 - LaunchRequest: # LaunchRequest is not an utterance but a request type and reserved word
-  - response.outputSpeech.ssml: Welcome to Aces Jumble Zilch guessing game. You have played 0 times. would you like to play?
+  - response.outputSpeech.ssml: Welcome to Aces Jacks Zero guessing game. You have played 0 times. would you like to play?
   - response.reprompt.outputSpeech.ssml: Say yes to start the game or no to quit.
   - response.shouldEndSession: false
   - response.card: undefined

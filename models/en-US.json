@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "aces jumble zilch game",
+      "invocationName": "aces Jacks Zero game",
         "intents": [
         {
           "name": "AMAZON.CancelIntent",

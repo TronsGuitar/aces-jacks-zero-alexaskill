@@ -617,7 +617,7 @@
 const Alexa = <span class="cstat-no" title="statement not covered" >require('ask-sdk');</span>
 const cookbook = <span class="cstat-no" title="statement not covered" >require('./alexa-cookbook.js');</span>
 &nbsp;
-const SKILL_NAME = <span class="cstat-no" title="statement not covered" >'Aces Jumble Zilch Game';</span>
+const SKILL_NAME = <span class="cstat-no" title="statement not covered" >'Aces Jacks Zero Game';</span>
 const FALLBACK_MESSAGE_DURING_GAME = <span class="cstat-no" title="statement not covered" >'The ${SKILL_NAME} skill can\'t help you with that.  Try guessing a number between 0 and 100. ';</span>
 const FALLBACK_REPROMPT_DURING_GAME = <span class="cstat-no" title="statement not covered" >'Please guess a number between 0 and 100.';</span>
 const FALLBACK_MESSAGE_OUTSIDE_GAME = <span class="cstat-no" title="statement not covered" >'The ${SKILL_NAME} skill can\'t help you with that.  It will come up with a number between 0 and 100 and you try to guess it by saying a number in that range. Would you like to play?';</span>
@@ -651,7 +651,7 @@ const LaunchRequest = <span class="cstat-no" title="statement not covered" >{</s
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    attributesManager.setSessionAttributes(attributes);</span>
 &nbsp;
-    const speechOutput = <span class="cstat-no" title="statement not covered" >'Welcome to Aces Jumble Zilch guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';</span>
+    const speechOutput = <span class="cstat-no" title="statement not covered" >'Welcome to Aces Jacks Zero guessing game. You have played ${attributes.gamesPlayed.toString()} times. would you like to play?';</span>
     const reprompt = <span class="cstat-no" title="statement not covered" >'Say yes to start the game or no to quit.';</span>
 <span class="cstat-no" title="statement not covered" >    return responseBuilder</span>
       .speak(speechOutput)

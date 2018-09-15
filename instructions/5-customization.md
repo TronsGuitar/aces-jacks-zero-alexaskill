@@ -1,9 +1,9 @@
-# Build An Alexa Aces Jumble Zilch Game Skill
+# Build An Alexa Aces Jacks Zero Game Skill
 [![Voice User Interface](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/1-locked._TTH_.png)](./1-voice-user-interface.md)[![Lambda Function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/2-locked._TTH_.png)](./2-lambda-function.md)[![Connect VUI to Code](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/3-locked._TTH_.png)](./3-connect-vui-to-code.md)[![Testing](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/4-locked._TTH_.png)](./4-testing.md)[![Customization](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/5-on._TTH_.png)](./5-customization.md)[![Publication](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/6-off._TTH_.png)](./6-publication.md)
 
 ## Customize the Skill to be Yours
 
-At this point, you should have a working copy of our Aces Jumble Zilch Game skill.  In order to make it your own, you will need to customize it with some responses that you create.  Here are the things you will need to change:
+At this point, you should have a working copy of our Aces Jacks Zero Game skill.  In order to make it your own, you will need to customize it with some responses that you create.  Here are the things you will need to change:
 
 1.  **Update your sample utterances.** There are some sample utterances for NumberGuessIntent.  You need to update this list of utterances to for a robust voice experience. **Remember that if you are creating this skill for another language other than English, your sample utterances need to be written in that language, not English.**
 
@@ -11,9 +11,9 @@ At this point, you should have a working copy of our Aces Jumble Zilch Game skil
 
 3.  **New sentences to respond to your users.** There are several sentences and responses that you will want to customize for your skill.
 
-    1.  **Go back to your copy of [index.js]((https://github.com/TronsGuitar/aces-jumbles-zilch-alexaskill/blob/master/lambda/src/index.js)).**
+    1.  **Go back to your copy of [index.js]((https://github.com/TronsGuitar/aces-jacks-zero-alexaskill/blob/master/lambda/src/index.js)).**
 
-    2.  **Look for lines like this: this.response.speak('Welcome to Aces Jumble Zilch guessing game. You have played '."** These are strings that hold phrases for Alexa to respond with.  Customize them to make it as varied and conversational as time allows.
+    2.  **Look for lines like this: this.response.speak('Welcome to Aces Jacks Zero guessing game. You have played '."** These are strings that hold phrases for Alexa to respond with.  Customize them to make it as varied and conversational as time allows.
 
     3.  **Continue through index.js until you reach the bottom of the file.**  This will ensure that you cover each of the Alexa responses that you need to update.
 
