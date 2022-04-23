@@ -12,6 +12,8 @@ Resources:
       MemorySize: 128
       Timeout: 8
       Role: 'arn:aws:iam::171891960661:role/ask-lambda-aces-jumbles-zilch'
-      Events:
-        AlexaSkillEvent:
-          Type: AlexaSkill
+      Events: 
+         AlexaSkillEvent: 
+            Type: AlexaSkill
+            Properties: 
+              Bucket:
