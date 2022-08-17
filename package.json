@@ -24,6 +24,6 @@
   "homepage": "https://github.com/TronsGuitar/aces-jacks-zero-alexaskill#readme",
   "dependencies": {
     "alexa-sdk": "^1.0.25",
-    "ask-sdk": "^2.0.0"
+    "ask-sdk": "^2.814.0"
   }
 }
